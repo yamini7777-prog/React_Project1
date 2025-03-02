@@ -1,0 +1,49 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "Sreedhar",
+      "password": "Sreedhar4241"
+    },
+    {
+      "id": "35a8",
+      "email": "aradyulasai390@gmail.com",
+      "password": "aradyulasai390",
+      "gender": "Male",
+      "skills": [
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": "9f3c",
+      "email": "mantenayamini7@gmail.com",
+      "password": "Yamini@364",
+      "gender": "Female",
+      "skills": [
+        "CSS",
+        "HTML",
+        "JS",
+        "ReactJS"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "9fac",
+      "title": "New Text Note",
+      "text": "newly updated date format note..",
+      "date": "March 2, 2025 - 07:54 PM",
+      "favorite": false,
+      "userId": "9f3c"
+    },
+    {
+      "id": "65b3",
+      "title": "New Audio Note",
+      "text": "కొత్త ఆడియో నుండి స్టార్ట్ చేశా",
+      "date": "March 2, 2025 - 08:51 PM",
+      "favorite": false,
+      "userId": "9f3c"
+    }
+  ]
+}

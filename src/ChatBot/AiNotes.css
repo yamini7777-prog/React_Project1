@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Layout: Sidebar & Main Content */
+.app-container {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Sidebar */
+.main {
+  width: 20%;
+  border: 0.1px solid #d1d0d0;
+  border-radius: 30px;
+  padding: 10px;
+  background: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 45px;
+  height: 50px;
+  border-radius: 22px;
+  margin-right: 10px;
+}
+
+hr {
+  margin: 15px 0;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Navigation item styling */
+.nav-item {
+  display: flex;
+  align-items: center;
+  color: #813ec7;
+  font-weight: bold;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.container .nav-item:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+}
+
+.icon {
+  color: #813ec7;
+  margin-right: 6px;
+  font-size: 1.5rem;
+
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  margin-left: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search & Sort */
+.search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 86%;
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 5px;
+  border: 0.1px solid #d1d0d0;
+  border-radius: 25px;
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+/* .search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+  } */
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.sort-icon {
+  margin-right: 8px;
+}
+
+.sort-dropdown select {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Notes Section */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f8f9fa;
+  width: 100%;
+  max-width: 1080px;
+  /* margin: auto; */
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #888;
+}
+
+/* Ensure styles apply to the input */
+.search-bar input {
+  width: 100%;
+  /* padding: 10px 15px; */
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  /* Subtle bottom border */
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.search-bar input :focus {
+  border-bottom: 2px solid #007bff;
+  /* Highlight on focus */
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-icon {
+  font-size: 20px;
+  color: #555;
+}
+
+.sort-dropdown select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sort-dropdown select:hover {
+  border-color: #007bff;
+}
+
+.sort-dropdown select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.sort-dropdown option {
+  background: white;
+  color: #333;
+}
