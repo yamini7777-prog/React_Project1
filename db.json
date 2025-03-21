@@ -26,6 +26,29 @@
         "JS",
         "ReactJS"
       ]
+    },
+    {
+      "id": "a02b",
+      "email": "emanisakruthi@gmail.com",
+      "password": "emanisakruthi",
+      "gender": "Female",
+      "skills": [
+        "CSS",
+        "HTML",
+        "JS"
+      ]
+    },
+    {
+      "id": "6c82",
+      "email": "nallurisaisreedhar@gmail.com",
+      "password": "nalluri745",
+      "gender": "Male",
+      "skills": [
+        "CSS",
+        "HTML",
+        "JS",
+        "ReactJS"
+      ]
     }
   ],
   "notes": [
@@ -42,6 +65,38 @@
       "title": "New Audio Note",
       "text": "కొత్త ఆడియో నుండి స్టార్ట్ చేశా",
       "date": "March 2, 2025 - 08:51 PM",
+      "favorite": false,
+      "userId": "9f3c"
+    },
+    {
+      "id": "fd15",
+      "title": "New Text Note",
+      "text": "hello I am Ritesh sai",
+      "date": "March 3, 2025 - 12:52 PM",
+      "favorite": false,
+      "userId": "35a8"
+    },
+    {
+      "id": "e045",
+      "title": "New Audio Note",
+      "text": "హలో నేను రితేష్ ని",
+      "date": "March 3, 2025 - 01:05 PM",
+      "favorite": false,
+      "userId": "35a8"
+    },
+    {
+      "id": "0bc6",
+      "title": "New Audio Note",
+      "text": "थोड़ा प्याज डालो",
+      "date": "March 3, 2025 - 01:06 PM",
+      "favorite": false,
+      "userId": "35a8"
+    },
+    {
+      "id": "f21f",
+      "title": "New Audio Note",
+      "text": "hay hello how are you",
+      "date": "March 20, 2025 - 03:07 PM",
       "favorite": false,
       "userId": "9f3c"
     }

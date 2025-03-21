@@ -1,5 +1,6 @@
 
-//! Desc: AiNotes.jsx for the ChatBot 
+// //! Desc: AiNotes.jsx for the ChatBot
+ 
 import React, { useState, useEffect } from "react";
 import { FaHome, FaStar } from "react-icons/fa";
 import "./AiNotes.css";
@@ -7,20 +8,19 @@ import SearchBar from "../Components/SearchBar";
 import Sort from "../Components/Sort";
 import Home from "../Components/Home";
 import Favorite from "../Components/Favorite";
+import Profile from "../Components/Profile"; 
 import { parse, format } from "date-fns";
 
 const AiNotes = () => {
   const [activeTab, setActiveTab] = useState("home");
-  const [notes, setNotes] = useState([]); // Empty notes array initially
+  const [notes, setNotes] = useState([]); 
   const [filteredNotes, setFilteredNotes] = useState([]);
   const [sortOrder, setSortOrder] = useState("newest");
-
 
   useEffect(() => {
     let sortedNotes = [...notes];
 
     sortedNotes.sort((a, b) => {
-
       const dateA = parse(a.date, "MMMM d, yyyy - hh:mm a", new Date());
       const dateB = parse(b.date, "MMMM d, yyyy - hh:mm a", new Date());
 
@@ -28,7 +28,7 @@ const AiNotes = () => {
     });
 
     setFilteredNotes(sortedNotes);
-  }, [notes, sortOrder]);// Runs when notes or sortOrder changes
+  }, [notes, sortOrder]); // Runs when notes or sortOrder changes
 
   const toggleFavorite = (id) => {
     setNotes((prevNotes) =>
@@ -76,9 +76,12 @@ const AiNotes = () => {
           <div className="sort-dropdown">
             <Sort sortOrder={sortOrder} setSortOrder={setSortOrder} />
           </div>
+          <div className="profile-section">
+            <Profile /> 
+          </div>
         </div>
 
-        {/* Pass filteredNotes instead of notes */}
+        
         {activeTab === "home" ? (
           <Home notes={filteredNotes} setNotes={setNotes} toggleFavorite={toggleFavorite} />
         ) : (
@@ -90,5 +93,3 @@ const AiNotes = () => {
 };
 
 export default AiNotes;
-
-

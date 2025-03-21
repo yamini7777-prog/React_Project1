@@ -12,6 +12,7 @@ const Register = () => {
         gender: ""
     });
     let [checkbox, setCheckBox] = useState([]);
+    let [successMessage, setSuccessMessage] = useState(""); // Success message state
 
     let handleChange = (e) => {
         let { name, value } = e.target;
@@ -25,17 +26,27 @@ const Register = () => {
             : setCheckBox(checkbox.filter((val) => val !== value));
     };
 
-    let handleSubmit = (e) => {
+    let handleSubmit = async (e) => {
         e.preventDefault();
         let { email, password, gender } = state;
         let payload = { email, password, gender, skills: checkbox };
-        Services.userRegister(payload);
+
+        try {
+            await Services.userRegister(payload);
+            setSuccessMessage("User registration successful! 🎉"); // Show success message
+        } catch (error) {
+            console.error("Registration failed:", error);
+            setSuccessMessage("Registration failed. Please try again.");
+        }
     };
 
     return (
         <div className={styles.registerWrapper}>
             <div className={styles.registerContainer}>
                 <h2>Create Your Account</h2>
+                
+                {successMessage && <p className={styles.successMessage}>{successMessage}</p>} {/* Success Message */}
+
                 <form onSubmit={handleSubmit}>
                     <label>Email:</label>
                     <input type="email" name="email" onChange={handleChange} required />
